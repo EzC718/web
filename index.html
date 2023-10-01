@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>EZ Creations 718 - Entertainment Starts Here with video game and Entertainment rentals</title>
+  <meta name="description" content="EZ Creations 718 specializes in video and video game rentals for various events, offering a range of handheld emulators to interactive consoles.">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400&display=swap" rel="stylesheet">
@@ -8,7 +10,7 @@
   body, html {
     margin: 0;
     height: 100%;
-    background-color: rgb(42, 42, 100);
+    background-color: rgb(2, 0, 29);
     overflow: hidden;
   }
 
@@ -23,45 +25,65 @@
   #center-image {
     width: 38%;
     height: 38%;
-    object-fit: cover;
+    object-fit: scale-down;
     margin: 0%;
   }
 
   #image-link {
-    display: grid;
-    width: 300px;
-    height: 300px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
   }
 
   .header {
     position: absolute;
-    width: 50%;
-    background-image: url('https://cdn.discordapp.com/attachments/1089025488812527778/1152997369873436752/BC56FD1A-4ADD-4D08-BDF6-60C215638047.png');
-    background-size: 385px 95px;
-    background-repeat: no-repeat;
-    background-position: center;
-    padding: 46px;
+width: 100%;
     left: 50%;
     transform: translateX(-50%);
-    align-items: stretch;
-  }
+    overflow: hidden;  /* Ensure the video doesn't spill out of the header */
+}
+
+.header-video {
+    width: 100%;
+    height: 80%;
+    display: block;
+}
+
 
   .toggle-button {
     position: absolute;
+    align-content: center;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
+    background-color: whitesmoke;
+    border-radius: 0.25px;
+    font-size: 20px;
+    padding: -20px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+
+  .mute-button {
+    position: absolute;
+    top: 100px;
+    left: calc(50% + 35px); /* Move it to the right of the toggle button */
     background-color: rgb(255, 255, 255);
-    border: 10%;
     border-radius: 0.25px;
     font-size: 20px;
     padding: 0px;
     cursor: pointer;
+}
+
+
+
+  :focus {
+    outline: 2px solid lime;
   }
 
   .sidebar, .right-sidebar {
     width: 0;
-    height: 100vh;
+    height: 300vh;
     padding: .11px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -82,33 +104,39 @@
   }
 
   .right-sidebar .fun-facts {
-  padding: 8px;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
+        padding: 14px;
+        font-family: 'Roboto', white;
+        font-style: oblique ;
+        text-align: center;
+        margin-top: 6px;
+        color: white;
+        font-size: large; 
+
 }
 
-.right-sidebar .fun-facts h2 {
-  font-size: 1.12em;
-  text-align: center;
-  margin-bottom: 24px;
-  margin-top: -4px;
-  font-family: 'Press Start 2P', cursive;
-}
+.photo-collage {
+    overflow-y: auto;
+    margin-top: 22px;
+    margin-right: 14px;
+    max-height: 510px; /* Adjust as needed */
+    border-top: 1px whitesmoke;
+    align-content: center;
+    scrollbar-width: thin;
+  }
 
-.right-sidebar .fun-facts ul {
-  list-style-type: square;
-  margin: 0;
-  padding: 0 2px;
-  text-decoration-style: solid;
-}
+  .photo-collage::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Edge */
+    }
 
-.right-sidebar .fun-facts ul li {
-  margin-bottom: 7px;
-  margin-left: 16px;
-  font-style: oblique;
-}
 
+  .photo-collage img {
+    width: 100%; /* Make image take the full width of the container */
+    box-sizing: border-box;
+    margin-bottom: 10px; /* Space between images */
+    margin-top: 5px;
+    outline: magenta solid;
+  }
+  
   .sidebar {
     background-color: #744888;
     left: 0%;
@@ -126,8 +154,8 @@
     top: 10px;
     left: 10px;
     background-color: rgb(255, 255, 255);
-    font-size: 14px;
-    padding: 5px;
+    font-size: 12px;
+    padding: 4px;
     cursor: pointer;
   }
 
@@ -136,7 +164,9 @@
   }
 
   .sidebar a:hover {
-    color: rgb(88, 250, 56);
+    color: rgb(81, 255, 203);
+    text-decoration: underline magenta;
+    font-style: oblique;
 }
 
 .banner {
@@ -173,52 +203,96 @@
   }
 
   @media (max-width: 768px) {
-    .header {
-      width: 40%;
-      left: 50%;
-      transform: translateX(-50%);
+      .header {
+        background-size: 100%; /* Adjusted the background size */
+      }
+      .toggle-button {
+        top: 70px; /* Adjusted the position */
+        font-size: 16px; /* Adjusted the font size */
+      }
+      .sidebar, .right-sidebar {
+        width: 150px; /* Adjusted the width */
+      }
+      #center-image {
+        width: 80%; /* Adjusted the width */
+        height: 80%; /* Adjusted the height */
+      }
+      .banner a {
+        font-size: 14px; /* Adjusted the font size */
+      }
+      .right-sidebar .fun-facts {
+        font-size: medium; /* Adjusted the font size */
+      }
     }
-    .main-content {
-      margin-left: 0;
-    }
-  }
+    @media (max-width: 768px) {
+            .sidebar, .right-sidebar {
+                display: none; 
+            }
 
+            .sidebar.active, .right-sidebar.active {
+                display: block;
+            }
+    
+      .toggle-button {
+        top: 50px; /* Adjusted the position */
+        font-size: 14px; /* Adjusted the font size */
+      }
+      .sidebar, .right-sidebar {
+        width: 120px; /* Adjusted the width */
+      }
+      #center-image {
+        width: 90%; /* Adjusted the width */
+        height: 90%; /* Adjusted the height */
+      }
+      .banner a {
+        font-size: 12px; /* Adjusted the font size */
+      }
+      .right-sidebar .fun-facts {
+        font-size: small; /* Adjusted the font size */
+      }
+    }
 </style>
 </head>
-<body>
+<body onload="document.getElementById('toggle-button').focus();">
 
-<div class="header">
-  <!-- Removed the button from here -->
+<div class="header" aria-label="Decorative header saying Entertainment Starts Here." title="Entertainment Starts Here. Click toggle button below to open side menus. The center image is linked to the about page.">
+    <video autoplay muted loop class="header-video">
+        <source src="file:///C:/Users/ejwil/Videos/Video(6)-1.m4v" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </div>
 
-<button class="toggle-button" onclick="toggleSidebar()">☰</button>
+<button id="toggle-button" class="toggle-button" onclick="toggleSidebar()" title="Click toggle button to open/close side menus.">☰</button>
+<button id="mute-button" class="mute-button" onclick="toggleSpeechMute(), toggleSound()" title="Mute/Unmute speech">👂</button>
+
 
 <div class="sidebar">
-  <div class="banner red"><p><a href="ABOUT.html">ABOUT</a></p></div>
-  <div class="banner orange"><p><a href="CONTACT.html">CONTACT</a></p></div>
-  <div class="banner yellow"><p><a href="gear-and-packages.html">Packages</a></p></div>
-  <div class="banner green"><p><a href="#handhelds">Handhelds</a></p></div>
-  <div class="banner blue"><p><a href="#accessories">Accessories</a></p></div>
-  <div class="banner indigo"><p><a href="gear-and-packages.html#Students">Students</a></p></div>
-  <div class="banner black"><p><a href="gear-and-packages.html#streamers-and-content-creators">Streamers, Content Creators</a></p></div>
+  <div class="banner red"><p><a href="ABOUT.html" title="Link to ABOUT page">ABOUT</a></p></div>
+  <div class="banner orange"><p><a href="CONTACT.html" title="Link to CONTACT page">CONTACT</a></p></div>
+  <div class="banner yellow"><p><a href="gear-and-packages.html" title="Link to Packages page">Packages</a></p></div>
+  <div class="banner green"><p><a href="#handhelds" title="Link to Handhelds page">Handhelds</a></p></div>
+  <div class="banner blue"><p><a href="#accessories" title="Link to Accessories page">Accessories</a></p></div>
+  <div class="banner indigo"><p><a href="gear-and-packages.html#Students" title="Link to Students page">Students</a></p></div>
+  <div class="banner black"><p><a href="gear-and-packages.html#streamers-and-content-creators" title="Link to Streamers and Content Creators page">Streamers, Content Creators</a></p></div>
 </div>
 
 <div class="right-sidebar">
-    <button class="right-sidebar-toggle" onclick="toggleSidebar()">☰</button>
-    <div class="fun-facts">
-      <h2>Fun Facts</h2>
-      <ul>
-        <li>The PS3 was one of the first gaming consoles to include a Blu-ray player.</li>
-        <li>The best-selling video game console of all time is the PlayStation 2.</li>
-        <li>The Game Boy was the first successful handheld emulator, launched in 1989.</li>
-        <li>The Echo Dot can learn new "skills" which are essentially apps that extend its functionality.</li>
-        <li>The Xbox was named as a reference to the graphical API, DirectX.</li>
-        <li>The Xbox 360 is one of the best multimedia systems,from controller free gaming to playing DVDs</li>
-        <li>The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu.</li>
-      </ul>
-    </div>
+  <button class="right-sidebar-toggle" onclick="toggleSidebar()">☰</button title="Click toggle button below to open/close side menus.">
+  <div class="fun-facts" title="Fun facts">
+    <div id="fun-fact">Look here for fun facts!</div>
+    <!-- Removed the h2 and ul tags here -->
+    <div class="photo-collage">
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155322783664967680/3CE38B6F-C981-46CC-8574-0A0E97F3DCC6.jpeg" alt="Product 1" title="Echo Dot featuring Alexa avalible in different colors">
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155321237900361748/393957A0-E8BD-422F-BAE5-0D22D8A7CB0A.jpeg" alt="Product 2" title="Firestick, Firestick 4k, FireTV">
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155321239141875712/9EBB7987-5504-40A8-85AE-99D0F42166B3.jpeg" alt="Product 3" title="Wii consoles">
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155321238709866496/E88AF95A-A06E-410F-9F16-B1DB3694D3BB.jpeg" alt="Product 4" title="Xbox 360 pro and Slim avalible">    
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155321240416948244/83F5C68A-8129-40D0-A140-FAC52FF1EB3E.jpeg" alt="Product 5" title="Original Xbox avalible">
+      <img src="https://cdn.discordapp.com/attachments/1089025488812527778/1155321239401943180/BFAAD76C-455F-4D72-9542-FBE71E741AA2.jpeg?ex=65143400&is=6512e280&hm=8c4925c4f81e81f152575975964395dec148b8982fc9a999fdb1fb61d9827e99&" alt="Product 6" title="PS3s avalible">
+
+</div>
   </div>
-  
+</div>  
+
 
 <div class="container">
 <a href="ABOUT.html" id="https://cdn.discordapp.com/attachments/1089025488812527778/1151975687952007168/B3F2316E-2ED2-4F89-BB25-7628A74C62FB.png" title="EZ Creations 718 is located in New York, NY. They specialize in video and video game rentals for various events. Their offerings range from handheld emulators to interactive consoles like the Wii, Oculus VR, and Echo Dot (hands-free). If a client's requirements exceed the capacity of what EZ Creations 718 can provide, they assure customers that they will guide them towards the right solution. Monday: Open 24 hours
@@ -236,11 +310,115 @@
   <!-- Main content goes here -->
 </div>
 
+<audio id="toggleSound" src="file:///C:/Users/ejwil/Desktop/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3" preload="metadata"></audio>
+
+
 <script>
-  function toggleSidebar() {
+function toggleSidebar() {
     document.querySelector('.sidebar').classList.toggle('active');
     document.querySelector('.right-sidebar').classList.toggle('active');
-  }
+
+    let audio = new Audio('file:///C:/Users/ejwil/Desktop/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3');
+    audio.volume = 0.15;
+    audio.play();
+
+    // Stop any ongoing speech synthesis
+    window.speechSynthesis.cancel();
+
+    // If mute is active, don't start the speech
+    if (isMuted) return;
+
+    // Listen for the audio to end and then read titles
+    audio.addEventListener('ended', () => {
+        readOutTitles();
+    });
+}
+
+
+        function readOutTitles() {
+    // Get all elements with a title attribute
+    const elementsWithTitle = document.querySelectorAll('[title]');
+    
+    // Extract the title values
+    let titles = [];
+    elementsWithTitle.forEach(elem => {
+        titles.push(elem.title);
+    });
+
+    // Create a function to recursively read the titles
+    function speakTitle(index) {
+    currentIndex = index;
+    if (index >= titles.length) return;  // Stop when all titles are read
+
+    var utterance = new SpeechSynthesisUtterance(titles[index]);
+    utterance.volume = 0.3;  // Set the volume to 30%
+    utterance.rate = 1.5;   // Increase the rate/speed of the speech
+    utterance.onend = function(event) {
+        speakTitle(index + 1);  // Speak the next title when the current one ends
+    };
+    window.speechSynthesis.speak(utterance);
+}
+
+
+    speakTitle(0);  // Start speaking from the first title
+}
+
+let isMuted = false;
+
+function toggleSpeechMute() {
+    if (isMuted) {
+        document.getElementById("mute-button").textContent = "👂";
+        readOutTitles();
+    } else {
+        window.speechSynthesis.cancel();
+        document.getElementById("mute-button").textContent = "🔇";
+    }
+    isMuted = !isMuted;
+}
+
+
+
+
+
+
+
+  const funFacts = [
+    "The first video game was created in 1958 by William Higinbotham.",
+    "The PlayStation 2 is the best-selling video game console of all time.",
+    "The Game Boy was the first handheld console to use game cartridges.",
+    "Nintendo was originally a playing card company before it ventured into video games.",
+    "The Konami Code is a famous cheat code that appears in many video games.",
+    "The longest recorded game of Monopoly lasted for 70 straight days.",
+    "Alexa plays Party Games like 'Would You Rather' or 'Truth or Dare' can be played in a group.",
+"Animal Sounds asks you to guess the animal based on the sound Alexa plays.",
+"Alexa plays Coloring Game encourages kids to draw or color a scene that Alexa describes.",
+"Alexa plays Simon Says, a memory game where you have to remember and repeat a sequence.",
+"Alexa plays Memory Match, that requires you to remember and repeat a list of items in order.ELDERLY FRIENDLY",
+"Alexa plays Breathing Exercises guide you through breathing techniques for relaxation.",
+"Alexa plays Mindfulness Challenges offer short quizzes to increase your mindfulness and awareness.",
+"Alexa plays Word Association involves saying a word and Alexa responds with an associated word.",
+"Alexa plays Interactive Stories are text-based adventures where your choices affect the outcome.",
+"Alexa plays Mystery and Detective Games let you solve mysteries by listening to clues.",
+"Alexa plays Chess allows you to play chess with Alexa using standard chess notation.",
+"Alexa plays Battleship is a voice-activated version of the classic board game.",
+"Alexa plays Math Challenges involve solving math problems or answering math-related questions.",
+"Alexa plays Language Learning games help you learn new words or phrases in a different language.",
+"The PS3 was one of the first gaming consoles to include a Blu-ray player.",
+"The best-selling video game console of all time is the PlayStation 2.",
+"The Game Boy was the first successful handheld emulator, launched in 1989.",
+"The Echo Dot can learn new skills which are essentially apps that extend its functionality.",
+"The Xbox was named as a reference to the graphical API, DirectX.",
+"The Xbox 360 is one of the best multimedia systems, from controller free gaming to playing DVDs.",
+"The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu.",
+];
+
+function displayFact() {
+  const randomIndex = Math.floor(Math.random() * funFacts.length);
+  document.getElementById('fun-fact').textContent = funFacts[randomIndex];
+}
+
+// Start cycling the fun facts every 6 seconds
+setInterval(displayFact, 4800);
 </script>
 
 </body>
