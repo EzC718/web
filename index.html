@@ -246,6 +246,58 @@ width: 100%;
         font-size: small; /* Adjusted the font size */
       }
     }
+
+    .ticker-wrap {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
+  background-color: #131313; 
+
+}
+.ticker {
+  display: inline-block;
+  margin-top: 12px;
+  animation: marquee 200s linear infinite;
+
+
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 1.5rem;
+  font-size: 1.2rem;
+  color: rgb(248, 248, 248);   
+  font-weight: 800;
+  font-family: 'Press Start 2P', serif;
+  font-style: italic;
+text-decoration: underline rgb(251, 255, 0);
+}
+
+
+/* Transition */
+@keyframes marquee {
+  0% {
+    transform: translateX(1.5%)
+  }
+  100% {
+    transform: translateX(-100%)
+  }
+}
+
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%,
+  100% {
+    left: 100%;
+  }
+}
 </style>
 </head>
 <body onload="document.getElementById('toggle-button').focus();">
@@ -273,8 +325,6 @@ width: 100%;
 
 <div class="right-sidebar">
   <button class="right-sidebar-toggle" onclick="toggleSidebar()">☰</button title="Click toggle button below to open/close side menus.">
-  <div class="fun-facts" title="Fun facts">
-    <div id="fun-fact">Look here for fun facts!</div>
     <!-- Removed the h2 and ul tags here -->
     <div class="photo-collage">
       <img src="Echo Dot.jpeg" alt="Product 1" title="Echo Dot featuring Alexa avalible in different colors">
@@ -301,11 +351,74 @@ width: 100%;
     </a>
 </div>
 
-<div class="main-content">
-  <!-- Main content goes here -->
-</div>
+<div class="ticker-wrap">
+  <span class="ticker">
+      <span class="ticker-item">The first video game was created in 1958 by William Higinbotham. </span>
+      <span class="ticker-item">The PlayStation 2 is the best-selling video game console of all time. </span>
+      <span class="ticker-item">The Game Boy was the first handheld console to use game cartridges. </span>
+      <span class="ticker-item">Nintendo was originally a playing card company before it ventured into video games </span>
+      <span class="ticker-item">The Konami Code is a famous cheat code that appears in many video games </span>
+      <span class="ticker-item">The longest recorded game of Monopoly lasted for 70 straight days </span>
+      <span class="ticker-item">Alexa plays Party Games like 'Would You Rather' or 'Truth or Dare' can be played in a group </span>
+      <span class="ticker-item">Animal Sounds asks you to guess the animal based on the sound Alexa plays </span>
+      <span class="ticker-item">Alexa plays Coloring Game encourages kids to draw or color a scene that Alexa describes </span>
+      <span class="ticker-item">Alexa plays Simon Says, a memory game where you have to remember and repeat a sequence </span>
+      <span class="ticker-item">Alexa plays Memory Match, that requires you to remember and repeat a list of items in order. ELDERLY FRIENDLY </span>
+      <span class="ticker-item">Alexa plays Breathing Exercises guide you through breathing techniques for relaxation </span>
+      <span class="ticker-item">Alexa plays Mindfulness Challenges offer short quizzes to increase your mindfulness and awareness </span>
+      <span class="ticker-item">Alexa plays Word Association involves saying a word and Alexa responds with an associated word </span>
+      <span class="ticker-item">Alexa plays Interactive Stories are text-based adventures where your choices affect the outcome </span>
+      <span class="ticker-item">Alexa plays Mystery and Detective Games let you solve mysteries by listening to clues </span>
+      <span class="ticker-item">Alexa plays Chess allows you to play chess with Alexa using standard chess notation </span>
+      <span class="ticker-item">Alexa plays Battleship is a voice-activated version of the classic board game </span>
+      <span class="ticker-item">Alexa plays Math Challenges involve solving math problems or answering math-related questions </span>
+      <span class="ticker-item">Alexa plays Language Learning games help you learn new words or phrases in a different language </span>
+      <span class="ticker-item">The PS3 was one of the first gaming consoles to include a Blu-ray player </span>
+      <span class="ticker-item">The best-selling video game console of all time is the PlayStation 2 </span>
+      <span class="ticker-item">The Game Boy was the first successful handheld emulator, launched in 1989 </span>
+      <span class="ticker-item">The Echo Dot can learn new skills which are essentially apps that extend its functionality </span>
+      <span class="ticker-item">The Xbox was named as a reference to the graphical API, DirectX </span>
+      <span class="ticker-item">The Xbox 360 is one of the best multimedia systems, from controller free gaming to playing DVDs </span>
+      <span class="ticker-item">The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu</span>
+      <span class="ticker-item">The first commercially successful video game, Pong, was released by Atari in 1972.</span>
+<span class="ticker-item">Super Mario Bros., originally released for the NES in 1985, is one of the best-selling video games of all time.</span>
+<span class="ticker-item">The Legend of Zelda series was principally inspired by creator Shigeru Miyamoto's explorations as a young boy in the hillsides surrounding his childhood home in Japan.</span>
+<span class="ticker-item">Minecraft, first released in 2011, is the best-selling video game of all time, with over 200 million copies sold across all platforms.</span>
+<span class="ticker-item">The character of Sonic the Hedgehog was designed to have broad international appeal, and his early designs were inspired by Michael Jackson and Bill Clinton's "can-do" attitude.</span>
+<span class="ticker-item">The highest score ever achieved in Pac-Man is 3,333,360 points, a perfect game achieved by less than a dozen people since the game's release in 1980.</span>
+<span class="ticker-item">Lara Croft from Tomb Raider was originally named Laura Cruz, and her character underwent significant development before becoming the iconic adventurer known today.</span>
+<span class="ticker-item">Final Fantasy got its name from being what was expected to be Square's last game, due to financial troubles at the time of its development.</span>
+<span class="ticker-item">The Pokémon franchise is the highest-grossing media franchise of all time, surpassing Star Wars, Marvel, and Mickey Mouse.</span>
+<span class="ticker-item">The first Easter egg in a video game was in Adventure for the Atari 2600, where the creator, Warren Robinett, hid his name in a secret room.</span>
+<span class="ticker-item">World of Warcraft, released in 2004, holds the Guinness World Record for the most popular MMORPG by subscribers.</span>
+<span class="ticker-item">In 1998, The Legend of Zelda: Ocarina of Time was one of the first games to feature a lock-on combat system, revolutionizing action-adventure gameplay.</span>
+<span class="ticker-item">The original concept for the game that would become Doom involved a time-traveling fight against demons, inspired by the movie Aliens.</span>
+<span class="ticker-item">Street Fighter II, released in 1991, is credited with establishing many of the conventions of the one-on-one fighting genre.</span>
+<span class="ticker-item">The voices of the ghosts in Pac-Man are meant to represent their personalities: "Blinky" (red) chases Pac-Man, "Pinky" (pink) tries to position itself in a set way, "Inky" (blue) is unpredictable, and "Clyde" (orange) moves randomly.</span>
+<span class="ticker-item">Tetris was invented by a Soviet software engineer, Alexey Pajitnov, in 1984.</span>
+<span class="ticker-item">The best-selling handheld game console of all time is the Nintendo DS.</span>
+<span class="ticker-item">The original name of Sonic the Hedgehog was Mr. Needlemouse.</span>
+<span class="ticker-item">Pac-Man has inspired over 30 officially licensed game spin-offs.</span>
+<span class="ticker-item">The longest videogame marathon on Minecraft lasted more than 35 hours.</span>
+<span class="ticker-item">The first video game to feature a soundtrack was Space Invaders in 1978.</span>
+<span class="ticker-item">Donkey Kong was Mario's first opponent, back when Mario was known as Jumpman.</span>
+<span class="ticker-item">The highest-grossing entertainment release of all time is not a movie but a video game: Grand Theft Auto V.</span>
+<span class="ticker-item">World of Warcraft was recognized by the Guinness World Records as the most popular MMORPG.</span>
+<span class="ticker-item">League of Legends World Championship finals have drawn larger audiences than the NBA Finals.</span>
+<span class="ticker-item">The concept of the "Easter egg" in games started with Adventure for the Atari 2600, allowing players to discover a hidden message.</span>
+<span class="ticker-item">Mass Effect 2 holds the record for the most voice acting in a single video game, with over 31,000 lines.</span>
+<span class="ticker-item">The Witcher 3: Wild Hunt's world is 20% bigger than Skyrim's.</span>
+<span class="ticker-item">The creator of the Game Boy, Gunpei Yokoi, was originally a janitor at Nintendo.</span>
+<span class="ticker-item">In the game Portal, the cake is a lie.</span>
+<span class="ticker-item">The first video game in space was Starcraft, played by astronaut Daniel Barry on the Space Shuttle mission STS-96 in 1999.</span>
+<span class="ticker-item">The voice actor for Mario, Charles Martinet, has voiced the character in over 100 games.</span>
+<span class="ticker-item">Before settling on the iconic green color, Xbox's original color was going to be orange.</span>
+<span class="ticker-item">In Assassin's Creed, the animus interface elements were originally blue, changed to gold to avoid similarities with The Matrix.</span>
+<span class="ticker-item">The original Doom game from 1993 has been ported to run on more platforms than any other game.</span>
 
-<audio id="toggleSound" src="web/086354_8-bit-arcade-video-game-start-sound-effect-gun-reload-and-jump-81124.mp3" preload="metadata"></audio>
+  </div>
+  
+  </div>
 
 
 <script>
@@ -371,13 +484,8 @@ function toggleSpeechMute() {
     isMuted = !isMuted;
 }
 
-
-
-
-
-
-
-  const funFacts = [
+// Array of ticker items
+const tickerItems = [
     "The first video game was created in 1958 by William Higinbotham.",
     "The PlayStation 2 is the best-selling video game console of all time.",
     "The Game Boy was the first handheld console to use game cartridges.",
@@ -385,35 +493,64 @@ function toggleSpeechMute() {
     "The Konami Code is a famous cheat code that appears in many video games.",
     "The longest recorded game of Monopoly lasted for 70 straight days.",
     "Alexa plays Party Games like 'Would You Rather' or 'Truth or Dare' can be played in a group.",
-"Animal Sounds asks you to guess the animal based on the sound Alexa plays.",
-"Alexa plays Coloring Game encourages kids to draw or color a scene that Alexa describes.",
-"Alexa plays Simon Says, a memory game where you have to remember and repeat a sequence.",
-"Alexa plays Memory Match, that requires you to remember and repeat a list of items in order.ELDERLY FRIENDLY",
-"Alexa plays Breathing Exercises guide you through breathing techniques for relaxation.",
-"Alexa plays Mindfulness Challenges offer short quizzes to increase your mindfulness and awareness.",
-"Alexa plays Word Association involves saying a word and Alexa responds with an associated word.",
-"Alexa plays Interactive Stories are text-based adventures where your choices affect the outcome.",
-"Alexa plays Mystery and Detective Games let you solve mysteries by listening to clues.",
-"Alexa plays Chess allows you to play chess with Alexa using standard chess notation.",
-"Alexa plays Battleship is a voice-activated version of the classic board game.",
-"Alexa plays Math Challenges involve solving math problems or answering math-related questions.",
-"Alexa plays Language Learning games help you learn new words or phrases in a different language.",
-"The PS3 was one of the first gaming consoles to include a Blu-ray player.",
-"The best-selling video game console of all time is the PlayStation 2.",
-"The Game Boy was the first successful handheld emulator, launched in 1989.",
-"The Echo Dot can learn new skills which are essentially apps that extend its functionality.",
-"The Xbox was named as a reference to the graphical API, DirectX.",
-"The Xbox 360 is one of the best multimedia systems, from controller free gaming to playing DVDs.",
-"The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu.",
+    "Animal Sounds asks you to guess the animal based on the sound Alexa plays.",
+    "Alexa plays Coloring Game encourages kids to draw or color a scene that Alexa describes.",
+    "Alexa plays Simon Says, a memory game where you have to remember and repeat a sequence.",
+    "Alexa plays Memory Match, that requires you to remember and repeat a list of items in order.",
+    "Alexa plays Breathing Exercises guide you through breathing techniques for relaxation.",
+    "Alexa plays Mindfulness Challenges offer short quizzes to increase your mindfulness and awareness.",
+    "Alexa plays Word Association involves saying a word and Alexa responds with an associated word.",
+    "Alexa plays Interactive Stories are text-based adventures where your choices affect the outcome.",
+    "Alexa plays Mystery and Detective Games let you solve mysteries by listening to clues.",
+    "Alexa plays Chess allows you to play chess with Alexa using standard chess notation.",
+    "Alexa plays Battleship is a voice-activated version of the classic board game.",
+    "Alexa plays Math Challenges involve solving math problems or answering math-related questions.",
+    "Alexa plays Language Learning games help you learn new words or phrases in a different language.",
+    "The PS3 was one of the first gaming consoles to include a Blu-ray player.",
+    "The best-selling video game console of all time is the PlayStation 2.",
+    "The Game Boy was the first successful handheld emulator, launched in 1989.",
+    "The Echo Dot can learn new skills which are essentially apps that extend its functionality.",
+    "The Xbox was named as a reference to the graphical API, DirectX.",
+    "The Xbox 360 is one of the best multimedia systems, from controller free gaming to playing DVDs.",
+    "The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu."
+    
 ];
 
-function displayFact() {
-  const randomIndex = Math.floor(Math.random() * funFacts.length);
-  document.getElementById('fun-fact').textContent = funFacts[randomIndex];
+// Function to shuffle the items
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // ES6 destructuring assignment for swapping
+    }
 }
 
-// Start cycling the fun facts every 6 seconds
-setInterval(displayFact, 4800);
+// Shuffle the ticker items
+shuffle(tickerItems);
+
+// Function to append ticker items to the DOM
+function appendTickerItems() {
+    const tickerContainer = document.querySelector('.ticker');
+    
+    // Clear existing items if any
+    tickerContainer.innerHTML = '';
+
+    // Create and append shuffled items
+    tickerItems.forEach(item => {
+        const spanElement = document.createElement('span');
+        spanElement.classList.add('ticker-item');
+        spanElement.textContent = item + " "; // Add space for separation
+        tickerContainer.appendChild(spanElement);
+    });
+}
+
+// Append items when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", appendTickerItems);
+
+
+
+
+
+
 </script>
 
 </body>
