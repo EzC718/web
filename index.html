@@ -22,7 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 90vh; /*center image vertical position*/
     text-align: center;
   }
 
@@ -64,7 +64,7 @@ width: 100%;
     border-radius: 0.25px;
     font-size: 20px;
     padding: -20px;
-    margin-top: 50px;
+    margin-top: -30px;
     cursor: pointer;
   }
 
@@ -73,7 +73,8 @@ width: 100%;
 
 
   :focus {
-    outline: 2px solid lime;
+    outline: 2px solid rgb(30, 255, 0);
+    
   }
 
   .sidebar, .right-sidebar {
@@ -98,39 +99,28 @@ width: 100%;
     
   }
 
-  .right-sidebar .fun-facts {
-        padding: 8px;
-        font-family: 'Roboto', white;
-        font-style: oblique ;
-        text-align: center;
-        margin-top: 6px;
-        color: white;
-        font-size: large; 
-
-}
-
-.photo-collage {
-    overflow-y: auto;
-    margin-top: 18px;
-    margin-right: 3px;
-    max-height: 510px; /* Adjust as needed */
-    border-top: 1px whitesmoke;
-    align-content: center;
-    scroll-behavior: smooth;
-  }
-
-  .photo-collage::-webkit-scrollbar {
-        display: none; /* For Chrome, Safari, and Edge */
-    }
 
 
-  .photo-collage img {
-    width: 100%; /* Make image take the full width of the container */
-    box-sizing: border-box;
-    margin-bottom: 10px; /* Space between images */
-    margin-top: 5px;
-    outline: magenta solid;
-  }
+  .photo-collage {
+            overflow-y: auto;
+            position: relative; /* Added for absolute positioning inside */
+            height: 510px; /* Adjust as needed */
+            margin-top: 32px;
+            border-top: 1px solid whitesmoke;
+            align-content: center;
+            scroll-behavior: smooth;
+        }
+
+        .photo-collage::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Edge */
+        }
+
+        .photo-collage img {
+            width: 100%; /* Make image take the full width of the container */
+            box-sizing: border-box;
+            margin-bottom: 10px; /* Space between images */
+            outline: magenta solid;
+        }
   
   .sidebar {
     background-color: #744888;
@@ -172,6 +162,7 @@ width: 100%;
     align-items: center; /* Added */
     justify-content: center; /* Added */
     text-align: center;
+    overflow: hidden;
 }
 
 .banner a {
@@ -256,13 +247,14 @@ width: 100%;
   position: fixed;
   bottom: 0;
   height: 3rem;
-  background-color: #131313; 
+  background-color: #010233; 
 
 }
 .ticker {
   display: inline-block;
   margin-top: 12px;
   animation: marquee 200s linear infinite;
+
 
 
 }
@@ -273,7 +265,9 @@ width: 100%;
   font-size: 1.2rem;
   color: rgb(248, 248, 248);   
   font-weight: 800;
-  font-family: 'Press Start 2P', serif;
+  font-family: 'Press Start 2P', none;
+  letter-spacing: 1px;
+  text-shadow: 24px, purple;
 }
 
 
@@ -510,7 +504,32 @@ const tickerItems = [
     "The Echo Dot can learn new skills which are essentially apps that extend its functionality.",
     "The Xbox was named as a reference to the graphical API, DirectX.",
     "The Xbox 360 is one of the best multimedia systems, from controller free gaming to playing DVDs.",
-    "The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu."
+    "The Firestick 4K offers a wide range of apps, including popular streaming services like Netflix and Hulu.",
+    "The first commercially successful arcade video game, Computer Space, was released in 1971, predating Pong.",
+"Miyamoto Shigeru, the creator of Super Mario, also designed Donkey Kong and The Legend of Zelda.",
+"The Elder Scrolls V: Skyrim was developed by Bethesda Game Studios and has over 60,000 lines of dialogue.",
+"The original Resident Evil video game has a live-action opening, which was heavily censored and edited outside Japan.",
+"The Sims, released in 2000, is one of the best-selling PC games of all time, allowing players to simulate life in a suburban household.",
+"Half-Life 2, developed by Valve Corporation, was the first game to require installation of the Steam client to play.",
+"Call of Duty: Modern Warfare 3 reached $1 billion in sales faster than any entertainment release in history, including movies.",
+"The highest-grossing arcade game of all time is Pac-Man, estimated to have generated over $12 billion in revenue.",
+"BioShock, set in the dystopian underwater city of Rapture, was praised for its intriguing storyline and immersive environment.",
+"The concept of achievements, which are now common in games, was popularized by Microsoft's Xbox 360 console.",
+"Portal’s development team was inspired by the student project game Narbacular Drop, leading Valve to hire the students.",
+"Dark Souls is renowned for its difficulty level, with the game's tagline being 'Prepare to Die'.",
+"Animal Crossing's real-time game clock syncs with the real world, including changes in season and time of day.",
+"Minecraft was created by Markus Persson, also known as Notch, and later sold to Microsoft for $2.5 billion.",
+"Red Dead Redemption 2, developed by Rockstar Games, features a game world that includes 500,000 lines of dialogue and over 300,000 animations.",
+"The Legend of Zelda: Breath of the Wild allows for nonlinear gameplay, a significant departure from the franchise's traditional linear structure.",
+"Fortnite Battle Royale became a cultural phenomenon, with over 250 million registered accounts.",
+"The character Kirby was named after John Kirby, the legal counsel for Nintendo who helped them win a copyright infringement lawsuit against Universal Studios.",
+"The Guinness World Record for the longest videogame marathon is held by a group who played Q*bert for over 84 hours.",
+"Shadow of the Colossus is known for its minimalistic design, focusing on giant boss battles with no towns or dungeons to explore.",
+"Metal Gear Solid, created by Hideo Kojima, was one of the first games to implement stealth as a primary game mechanic.",
+"The voice of Super Mario, Charles Martinet, originally auditioned for the role on a whim without knowing much about the character.",
+"World of Warcraft players have collectively spent more than 6 million years playing the game, according to Blizzard Entertainment.",
+"The Pokémon Go mobile game led to a significant increase in physical activity among many of its players, contributing to public health.",
+"Undertale, developed by Toby Fox, allows players to complete the game without killing any enemies, a feature known as the Pacifist Route."
     
 ];
 
